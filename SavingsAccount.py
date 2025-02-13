@@ -1,10 +1,11 @@
-import BankAccount
+from BankAccount import BankAccount
 
 class SavingsAccount(BankAccount):
     minimum_balance = 500
-    def __init__(self, account_number, customer_name, current_balance, interest_rate):
-        super().__init__(account_number, customer_name, current_balance)
+    def __init__(self, account_number, customer_name, current_balance, type, interest_rate, routing_number):
+        super().__init__(account_number, customer_name, current_balance, type)
         self.interest_rate = interest_rate
+        self.routing_number = routing_number
 
     def generate_interest(self):
         if self.current_balance >= self.minimum_balance:
