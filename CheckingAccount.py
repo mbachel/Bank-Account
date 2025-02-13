@@ -1,4 +1,4 @@
-import BankAccount from BankAccount
+import BankAccount
 
 class CheckingAccount(BankAccount):
     minimum_balance = 0

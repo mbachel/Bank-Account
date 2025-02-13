@@ -1,4 +1,4 @@
-import BankAccount from BankAccount
+import BankAccount
 
 class SavingsAccount(BankAccount):
     minimum_balance = 500
@@ -10,3 +10,5 @@ class SavingsAccount(BankAccount):
         if self.current_balance >= self.minimum_balance:
             self.current_balance *= (1 + self.interest_rate)
             print(f"Account balance was increased to {self.current_balance}")
+        else:
+            print("Account balance below minimum balance. Please deposit to earn interest.")
