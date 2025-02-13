@@ -18,6 +18,16 @@ def main():
     checking1.print_customer_information()
     savings1.print_customer_information()
 
+    #second instance, testing transfer and interest
+    checking2 = CheckingAccount(20,"John Doe", 500, "Checking", 18)
+    savings2 = SavingsAccount(20, "John Doe", 500 , "Savings", .07, 10)
 
+    savings2.generate_interest()
+    savings2.print_customer_information()
+
+    checking2.transfer_money(100,savings2)
+    savings2.generate_interest()
+    checking2.print_customer_information()
+    savings2.print_customer_information()
 
 main()
